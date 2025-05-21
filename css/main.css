@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+header {
+  background: black;
+  padding-top: 3px;
+  color: white;
+}
+
 .header-row {
   display: flex;
   justify-content: space-between;
@@ -31,58 +37,55 @@
   color: black;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1050;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-body {
-  padding-top: 210px; /* Ajusta según la altura total del header */
-}
-
-.mode-banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  background: #f2f2f2;
-  border-radius: 30px;
-  padding: 0.5rem 1.5rem;
-  width: fit-content;
-  margin: 0 auto 1rem auto;
-  font-weight: 500;
-  margin-left: 0;
-}
-
-.mode-banner .mode-label {
-  color: #333;
-  font-size: 1.1rem;
-}
-
-.mode-banner .form-switch {
-  margin-bottom: 0;
-}
-
-.mode-banner .form-check-input {
-  width: 3rem;
-  height: 1.5rem;
-  cursor: pointer;
-}
-
-.mode-banner .form-check-input:checked {
-  background-color: #343a40;
-  border-color: #343a40;
-}
-
 .title {
   justify-content: start;
   margin: 1rem;
   color: white;
+}
+
+.title h1 {
+  font-size: 1.5rem;
+}
+
+.career-banner {
+  display: flex;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  margin: 0; /* Sin márgenes externos */
+  background: #f0f0f0;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.career-banner input[type=radio] {
+  display: none; /* Oculta completamente los inputs */
+}
+
+.option {
+  flex: 1;
+  text-align: center;
+  padding: 25px 0; /* Altura más prominente */
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 18px; /* Texto más grande */
+}
+
+/* Efectos de color al seleccionar */
+#journalist-option:checked + .journalist {
+  background: #3498db;
+  color: white;
+}
+
+#ecommerce-option:checked + .ecommerce {
+  background: #f39c12;
+  color: white;
+}
+
+/* Opcional: Efecto hover más suave */
+.option:hover {
+  background: rgba(0, 0, 0, 0.05);
 }
 
 header {
@@ -102,11 +105,20 @@ header {
   margin: 20px;
 }
 
-.titulo-latam, .parrafo-latam {
+.titulo-latam,
+.parrafo-latam {
   margin-left: 6rem;
 }
 
-.titulo-projects, .parrafo-projects {
+.fondo-gris-journalism {
+  background-color: #f5f5f5;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.titulo-projects,
+.parrafo-projects {
   margin-left: 6rem;
 }
 
@@ -115,6 +127,10 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f5f5f5;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 }
 
 .tarjeta-support .row {

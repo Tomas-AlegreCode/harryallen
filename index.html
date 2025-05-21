@@ -9,26 +9,28 @@
 
     <!-- style -->
      <link rel="stylesheet" href="./css/main.css">
+
+     <!-- js switch -->
+      <script src="./js/switch.js" defer></script>
      
     <title>Harry Allen</title>
 
 </head>
+
 <body>
     <header>
         <!-- Title and phrase -->
         <div class="title">
             <h1>Harry Allen</h1>
         </div>
-        
-        <!-- Banner Switch de modos -->
-         <div class="header-row">
-            <div class="mode-banner">
-                <span class="mode-label" id="label-journalism">Journalism</span>
-                <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="modeSwitch">
-            </div>
-            <span class="mode-label" id="label-ecommerce">E-Commerce</span>
-         </div>
+
+<div class="career-banner">
+  <input type="radio" name="career-option" id="journalist-option" checked>
+  <label for="journalist-option" class="option journalist">Journalist</label>
+  
+  <input type="radio" name="career-option" id="ecommerce-option">
+  <label for="ecommerce-option" class="option ecommerce">E-Commerce</label>
+</div>
 
          <!-- Navegation menu -->
           <nav class="navbar">
@@ -41,61 +43,31 @@
                  <li><a href="./pages/contact.html">Contact</a></li>
              </ul>
             </nav> 
-    </header>
 
+    </header>
+    
     <main>
-        <!-- Fondo gris a todo el ancho -->
-         <section style="background-color: #f5f5f5; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%);">
+        <!-- Journalism Section -->
+         <section class="fondo-gris-journalism">
             <div class="container py-5">
-             <div class="row">
-                 <!-- Primera columna con 7 filas -->
-                 <div class="col-md-6">
-                    <div class="row mb-3">
-                        <div class="col">
-                            <p>Journalist & Media Professional</p>
-                        </div>
+                <div class="row align-items-center">
+                    <!-- Columna de texto -->
+                    <div class="col-md-6">
+                        <h2>Harry Allen</h2>
+                        <p>Journalist & Media Professional</p>
+                        <p>Telling Latin America´s untold stories</p>
+                        <p>I'm a passionate journalist with over 10 years of experience covering Latin American politics, culture, and social issues. My work focuses on bringing untold stories to light and providing in-depth analysis of complex regional dynamics.</p>
+                        <p>As the founder of LATAM Reportero, I've built a platform dedicated to high-quality journalism that bridges cultural gaps and promotes understanding across borders.</p>
+                        <button>View Portfolio</button>
+                        <button>View Portfolio</button>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col">
-                            <h2>Harry Allen</h2>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col">
-                            <p>Telling Latin America´s untold stories</p>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col">
-                            <p>I'm a passionate journalist with over 10 years of experience covering Latin American politics, culture, and social issues. My work focuses on bringing untold stories to light and providing in-depth analysis of complex regional dynamics.</p>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col">
-                            <p>As the founder of LATAM Reportero, I've built a platform dedicated to high-quality journalism that bridges cultural gaps and promotes understanding across borders.</p>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col">
-                            <button>View Portfolio</button>
-                            <button>View Portfolio</button>
-                        </div>
-                     </div>
-                     <div class="row mb-3">
-                        <div class="col">
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- Segunda columna con una imagen -->
-                <div class="col-md-6">
-                    <div class="h-100">
+                    <!-- Columna de imagen -->
+                    <div class="col-md-6 d-flex align-items-center">
                         <img src="./imagenes/marek-pospisil-ZujRyMTfBRA-unsplash.jpg" class="img-fluid img-journalism" alt="Imagen que ocupa todo el alto">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
         <!-- Seccion Latam Reportero -->
         <section class="latam-reportero">
@@ -177,11 +149,11 @@
          
          
 <!-- section Support my Job -->
- <section class="support-my-job" style="background-color: #f5f5f5; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%);">
+ <section class="support-my-job">
     <h2>Support My Journalism</h2>
     <p>Help fund independent reporting and contribute to stories that matter</p>
     <p>Quality journalism requires resources. Your support enables me to continue investigating important stories, travel to report from the field, and maintain editorial independence.</p>
- </section>
+
 
 <!-- Tarjetas debajo de Support My Journalism -->
 <div class="container my-4 tarjeta-support">
@@ -232,6 +204,7 @@
     </div>
     <p class="mb-5"> Your support makes independent journalism possible. For questions about contributions or partnerships, please contact support@latamreportero.com </p>
 </div>
+ </section>
 
 <!-- section Coaching -->
 <section class="coaching">
@@ -296,23 +269,5 @@
     <!-- bootstrap -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 
-    <script>
-        // Opcional: puedes agregar lógica para cambiar estilos o contenido según el modo
-        const modeSwitch = document.getElementById('modeSwitch');
-        const labelJournalism = document.getElementById('label-journalism');
-        const labelEcommerce = document.getElementById('label-ecommerce');
-
-        function updateBanner() {
-            if (modeSwitch.checked) {
-                labelJournalism.style.fontWeight = 'normal';
-                labelEcommerce.style.fontWeight = 'bold';
-            } else {
-                labelJournalism.style.fontWeight = 'bold';
-                labelEcommerce.style.fontWeight = 'normal';
-            }
-        }
-        modeSwitch.addEventListener('change', updateBanner);
-        updateBanner();
-    </script>
 </body>
 </html>
